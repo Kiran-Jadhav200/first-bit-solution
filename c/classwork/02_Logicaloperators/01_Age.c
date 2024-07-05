@@ -4,6 +4,7 @@ void main(){
 
     int age=24;
    // scanf("%d",age);
-    int ans = age >=18;
-    printf("the person is eligible for voting if ans is 1 and not is 0: %d",ans);
+    if(age >=18) printf("the person is eligible for voting ");
+    else printf("No");
+
 }
