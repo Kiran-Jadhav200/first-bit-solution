@@ -6,8 +6,8 @@ void main(){
     int radius=6; // radius of circle 
     int length = 8; // length of rect
     int width = 4; // width of react
-    float Carea, Cperimeter, Rarea, Rperimeter;
-    if(radius==0 || length==0 || width==0){
+    //float Carea, Cperimeter, Rarea, Rperimeter;
+    if(radius<=0 || length<=0 || width<=0){
         printf("enter value");
     }
     else{
