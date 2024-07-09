@@ -4,9 +4,6 @@ void main(){
     int choice;
     printf("what do you want to do\n1.Even odd\n2.Basic salary: ");
     scanf("%d", &choice);
-    
-
-    
     if(choice == 1){
         printf("Your have choice even odd\nenter number you want to find is even or odd: ");
         int odd;
@@ -29,8 +26,7 @@ void main(){
         da = basic* 0.15;
         ta = basic * 0.25;
         hra = basic * 0.30;
-        sal = basic + (da+ta+hra);
-        
+        sal = basic + (da+ta+hra);       
     }
     printf("your sal is %.2f",sal);
     }

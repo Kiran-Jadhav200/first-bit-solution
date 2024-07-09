@@ -1,12 +1,12 @@
 //Find factorial of number.
 #include<stdio.h>
 void main(){
-    int num;
+    int num;//5
     printf("Enter number: ");
-    scanf("%d", &num);
+    scanf("%d", &num);//5
     int sum =1;
-    int i = num;
-    while (i>0){
+    int i = num;//5
+    while (i>0){//5>0
         sum*=i;
         i--;
     }
