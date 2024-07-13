@@ -2,10 +2,12 @@
 //Find the price of item when discount is given (specify different discount based onprice)
 void discount();
 void main(){
+    
 discount();
 
 }
-void discount(){
+void discount()
+{
     double bill;
     printf("Enter Your Bill amaount: ");
     scanf("%lf", &bill);//1200
@@ -17,6 +19,4 @@ void discount(){
     else{
         printf("you are not eliglibe :(");
     }
-
 }
-

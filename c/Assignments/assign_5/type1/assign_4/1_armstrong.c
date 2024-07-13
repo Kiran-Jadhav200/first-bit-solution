@@ -1,7 +1,12 @@
 #include <stdio.h>
+
+void armstrong();
 void main()
 {
-
+armstrong();
+}
+void armstrong(){
+  
   int range, rem, temp, sum;
 
   printf("Enter Range: ");
