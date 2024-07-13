@@ -1,11 +1,11 @@
 #include <stdio.h>
-int firstAndList();
+void firstAndList();
 int main() {
-printf("sum is %d ", firstAndList());
+firstAndList();
 }
-int firstAndList()
+void firstAndList()
 {
-        int number, firstDigit, lastDigit;
+        int number, firstDigit, lastDigit, sum;
 
     printf("Enter a number: ");
     scanf("%d", &number);
@@ -21,6 +21,10 @@ int firstAndList()
     // Extract the last digit
     lastDigit = number % 10;
 
-    return firstDigit + lastDigit;
+    // Calculate the sum
+    sum = firstDigit + lastDigit;
 
+    
+
+    return 0;
 }

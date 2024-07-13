@@ -1,12 +1,11 @@
 #include<stdio.h>
 // nums is prime or not
-int primeOrNot();
+void primeOrNot();
 void main(){
- if(primeOrNot())printf("is prime");
- else printf("Not prime");
+   
 }
 
-int primeOrNot(){
+void primeOrNot(){
      int num = 0,i =0,flag =0;;
     printf("enter number you want that it is prime or not : ");
     scanf("%d", &num);
@@ -21,7 +20,7 @@ int primeOrNot(){
         }
         i++;
         }
-        return  flag==0? 1 : 0;
+       flag==0?printf("%d is a prime nums",num):printf("%d is not a prime nums",num);
    
     }
     else{
@@ -33,6 +32,6 @@ int primeOrNot(){
         flag= 1; break;
         }
     }
-   return flag==0? 1:0;
+    flag==0?printf("%d is a prime nums",num):printf("%d is not a prime nums",num);
     }
 }

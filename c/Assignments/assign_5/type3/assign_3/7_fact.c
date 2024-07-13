@@ -1,10 +1,10 @@
 //Find factorial of number.
 #include<stdio.h>
-int  fact();
+void fact();
 void main(){
-  printf("fact is ",fact());
+  
 }
-int fact(){
+void fact(){
       int num;//5
     printf("Enter number: ");
     scanf("%d", &num);//5
@@ -14,5 +14,5 @@ int fact(){
         sum*=i;
         i--;
     }
-    return sum;
+    printf("sum : %d",sum); 
 }

@@ -1,15 +1,12 @@
 #include <stdio.h>
 
-int palindrome();
+void palindrome();
 void main() {
-    if (palindrome()) {
-        printf("it is a palindrome.\n");
-    } else {
-        printf("it is not a palindrome.\n");
-    }
+    
+palindrome();
    
 }
-int palindrome(){
+void palindrome(){
     int num;
      printf("Enter a number: ");
     scanf("%d", &num);
@@ -22,5 +19,9 @@ int palindrome(){
         num /= 10;
     }
 
-    return originalNum == reversedNum;
+    if (originalNum == reversedNum) {
+        printf("%d is a palindrome.\n", originalNum);
+    } else {
+        printf("%d is not a palindrome.\n", originalNum);
+    }
 }

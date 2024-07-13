@@ -1,12 +1,10 @@
 #include<stdio.h>
-int perfectOrNot();
+void perfectOrNot();
 void main(){
-   if(perfectOrNot()) printf(" is perfect number");
-    else printf("No it's not perfect number");
-
+   perfectOrNot();
 }
 
-int perfectOrNot(){
+void perfectOrNot(){
      int num,sum=0;
     printf("Enter value: ");
     scanf("%d", &num);
@@ -17,5 +15,6 @@ int perfectOrNot(){
         }
         i++;
     }
-    return sum==num?1:0;
+    if(sum==num) printf("perfect numer is %d",sum);
+    else printf("No it's not perfect sum");
 }

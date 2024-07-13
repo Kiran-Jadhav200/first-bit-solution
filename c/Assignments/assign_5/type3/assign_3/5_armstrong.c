@@ -1,11 +1,11 @@
 #include<stdio.h>
 //Print table for the given number.
-int armstrong();
+void armstrong();
 void main(){
     armstrong();
 }
 
-int armstrong(){
+void armstrong(){
   int num,sum = 0;
     printf("enter number you want to check is armstrong: ");
     scanf("%d", &num);
@@ -20,7 +20,7 @@ int armstrong(){
             sum = sum+(rem*rem*rem);
             num = num/10; 
         }
-       return temp==sum?1:0;
+        temp==sum?printf("is a armstrong nums: %d",sum):printf("is not a armstrong nums: %d",sum);
     }
     else{
 
@@ -32,7 +32,7 @@ int armstrong(){
             sum = sum+(rem*rem*rem);
             num = num/10; 
         }
-        return temp==sum?1:0;
+        temp==sum?printf("is a armstrong nums: %d",sum):printf("is not a armstrong nums: %d",sum);
     }
     
 }
