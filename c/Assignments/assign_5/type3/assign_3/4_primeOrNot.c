@@ -1,14 +1,12 @@
 #include<stdio.h>
 // nums is prime or not
-void primeOrNot();
+void primeOrNot(int);
 void main(){
-   
+   primeOrNot(23);
 }
 
-void primeOrNot(){
-     int num = 0,i =0,flag =0;;
-    printf("enter number you want that it is prime or not : ");
-    scanf("%d", &num);
+void primeOrNot(int num){
+     int i =0,flag =0;
     printf("which loop you want to use\n while press 1: ");
     int choose;
     scanf("%d",&choose);

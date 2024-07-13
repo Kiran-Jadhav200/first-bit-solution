@@ -1,11 +1,11 @@
 #include<stdio.h>
-void perfectOrNot();
+void perfectOrNot(int);
 void main(){
-   perfectOrNot();
+   perfectOrNot(281);
 }
 
-void perfectOrNot(){
-     int num,sum=0;
+void perfectOrNot(int num){
+     int sum=0;
     printf("Enter value: ");
     scanf("%d", &num);
     int i =1;

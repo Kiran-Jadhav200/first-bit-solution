@@ -1,11 +1,11 @@
 #include<stdio.h>
-void strongNumber();
+void strongNumber(int);
 void main(){
  /*what is strong number so the strong number is a number whole sum of fact is equal to num taken from user*/
- strongNumber();
+ strongNumber(784);
 }
-void strongNumber(){
-    int num=145;
+void strongNumber(int num){
+    
  int x=num; //145
  int r,sum=0;
  int fact=1;

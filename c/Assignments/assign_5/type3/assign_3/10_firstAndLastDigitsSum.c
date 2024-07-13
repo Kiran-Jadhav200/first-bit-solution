@@ -1,14 +1,11 @@
 #include <stdio.h>
-void firstAndList();
+void firstAndList(int);
 int main() {
-firstAndList();
+firstAndList(1547);
 }
-void firstAndList()
+void firstAndList(int number)
 {
-        int number, firstDigit, lastDigit, sum;
-
-    printf("Enter a number: ");
-    scanf("%d", &number);
+        int firstDigit, lastDigit, sum;
 
     // Extract the first digit
     firstDigit = number;
@@ -23,8 +20,5 @@ void firstAndList()
 
     // Calculate the sum
     sum = firstDigit + lastDigit;
-
-    
-
-    return 0;
+printf("the firsrt and last digit sum is %d",sum);
 }

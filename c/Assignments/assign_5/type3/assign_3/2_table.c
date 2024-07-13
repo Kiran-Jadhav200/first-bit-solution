@@ -1,13 +1,12 @@
 #include<stdio.h>
 //Print table for the given number.
-void table();
+void table(int);
 void main(){
-table();
+table(7);
 }
-void table(){
-     int num = 0,i =0;
-    printf("enter number you want table of : ");
-    scanf("%d", &num);
+void table(int num){
+    int i =0;
+
     printf("which loop you want to use\n while press 1: ");
     int choose;
     scanf("%d",&choose);

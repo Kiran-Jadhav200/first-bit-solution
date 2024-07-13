@@ -1,15 +1,14 @@
 #include<stdio.h>
 // Calculate sum of numbers in the given range
 
-void  sumToRange();
+void  sumToRange(int);
 
 void main(){  
-    sumToRange();
+    sumToRange(19);
 }
-void sumToRange(){
-     int num = 0,i =0;
-    printf("enter number you want sum till: ");
-    scanf("%d", &num);
+void sumToRange(int num){
+    int i =0;
+   
     printf("which loop you want to use\n while press 1: ");
     int choose;
     scanf("%d",&choose);

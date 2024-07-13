@@ -1,12 +1,12 @@
 #include<stdio.h>
 //Print table for the given number.
-void armstrong();
+void armstrong(int);
 void main(){
-    armstrong();
+    armstrong(153);
 }
 
-void armstrong(){
-  int num,sum = 0;
+void armstrong(int num){
+  int sum = 0;
     printf("enter number you want to check is armstrong: ");
     scanf("%d", &num);
     printf("which loop you want to use\n while press 1: ");

@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-void palindrome();
+void palindrome(int);
 void main() {
     
-palindrome();
+palindrome(78);
    
 }
-void palindrome(){
-    int num;
+void palindrome(int num){
+   
      printf("Enter a number: ");
     scanf("%d", &num);
      int reversedNum = 0;
