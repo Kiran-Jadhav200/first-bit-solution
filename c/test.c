@@ -1,14 +1,41 @@
 #include <stdio.h>
-
-int main()
+int armstrong(int);
+void main()
 {
- int m=40,n=20;
- if (m>n) {
-  printf("m is greater than n");
+  int range = 0;
+  printf("Enter the range: ");
+  scanf("%d", &range);
+  for (int nums = 0; nums < range; nums++)
+  {
+    if (armstrong(nums))
+    {
+      printf(" %d ", nums);
+    }
+  }
 }
- else if(m<n) {
- printf("m is less than n"); }
- else {
-  printf("m is equal to n");}
 
+int armstrong(int num)
+{ // 4964
+  int temp, sum = 0;
+  int cnt = 0;
+  temp = num;
+  while (temp != 0) // 0
+  {
+    cnt++;      // 4
+    temp /= 10; // 0
+  }
+
+  temp = num; // 464
+  while (temp != 0)
+  {
+    int rem = temp % 10; // 4
+    int ans = 1;
+    for (int i = 0; i < cnt; i++)
+    {
+      ans *= rem;
+    }
+    sum += ans;
+    temp /= 10;
+  }
+  return sum == num; // 1 //0
 }

@@ -14,7 +14,7 @@ void main(){
 
 double areaofCirle(){
      int radius=6; 
-     return PI*(radius*radius);
+     
 
 }
 
