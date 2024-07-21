@@ -1,12 +1,15 @@
 #include<stdio.h>
-void evenOdd(int);
+void evenOdd(int*);
 void main(){
-  evenOdd(5);
+    printf("Enter number: ");
+    int  num;
+    scanf("%d",&num);
+  evenOdd(&num);
 }
 
-void  evenOdd(int num){
+void  evenOdd(int *num){
       
-    if(num%2==0){
+    if(*num%2==0){
         printf("it's a even number");
     }
     else{

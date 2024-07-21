@@ -1,12 +1,13 @@
 #include<stdio.h>
 //Print numbes from 1 to 10
-void printloop(int);
+void printloop(int*);
 void main(){
-printloop(10);
+    int num =10;
+printloop(&num);
 
 }
-void printloop(int n){
-    for (int  i = 0; i <=  n; i++)
+void printloop(int *n){
+    for (int  i = 0; i <=  *n; i++)
 {
     printf("%d\n",i);
 }

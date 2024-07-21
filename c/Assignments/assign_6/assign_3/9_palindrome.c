@@ -1,22 +1,21 @@
 #include <stdio.h>
 
-void palindrome(int);
+void palindrome(int*);
 void main() {
-    
-palindrome(78);
+    int nums = 78;
+palindrome(&nums);
    
 }
-void palindrome(int num){
+void palindrome(int *num){
    
-     printf("Enter a number: ");
-    scanf("%d", &num);
-     int reversedNum = 0;
-    int originalNum = num;
 
-    while (num != 0) {
-        int remainder = num % 10;
+     int reversedNum = 0;
+    int originalNum = *num;
+
+    while (*num != 0) {
+        int remainder = *num % 10;
         reversedNum = reversedNum * 10 + remainder;
-        num /= 10;
+        *num /= 10;
     }
 
     if (originalNum == reversedNum) {

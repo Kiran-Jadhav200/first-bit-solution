@@ -1,20 +1,20 @@
 #include<stdio.h>
-void perfectOrNot(int);
+void perfectOrNot(int*);
 void main(){
-   perfectOrNot(281);
+    int nums =281;
+   perfectOrNot(&nums);
 }
 
-void perfectOrNot(int num){
+void perfectOrNot(int *num){
      int sum=0;
-    printf("Enter value: ");
-    scanf("%d", &num);
+   
     int i =1;
-    while(i<num){
-        if(num%i==0){
+    while(i<*num){
+        if(*num%i==0){
             sum+=i;
         }
         i++;
     }
-    if(sum==num) printf("perfect numer is %d",sum);
+    if(sum==*num) printf("perfect numer is %d",sum);
     else printf("No it's not perfect sum");
 }

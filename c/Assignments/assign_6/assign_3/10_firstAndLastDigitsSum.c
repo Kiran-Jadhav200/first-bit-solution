@@ -1,14 +1,15 @@
 #include <stdio.h>
-void firstAndList(int);
+void firstAndList(int*);
 int main() {
-firstAndList(1547);
+    int num = 15545;
+firstAndList(&num);
 }
-void firstAndList(int number)
+void firstAndList(int *number)
 {
         int firstDigit, lastDigit, sum;
 
     // Extract the first digit
-    firstDigit = number;
+    firstDigit = *number;
     while (firstDigit >= 10) {
       
         firstDigit /= 10;
@@ -16,7 +17,7 @@ void firstAndList(int number)
     }
 
     // Extract the last digit
-    lastDigit = number % 10;
+    lastDigit = *number % 10;
 
     // Calculate the sum
     sum = firstDigit + lastDigit;

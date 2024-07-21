@@ -16,11 +16,19 @@ void main(){
         printf("[ %d ],", arr[i]);
         
     }
-
-
-for (int i = 0; i < len; i=i+2)
-{
-    printf("arr[%d] %d \n", i, arr[i]);
+printf("Prime is ");
+for(int i =0; i<len; i++ ){//i=1 && 1<7
+   int cnt =0;
+    for (int j = 2; j <=i/2;j++) //j=0
+    {
+        if(arr[i]%j==0){ //
+            cnt++;
+            break;
+        }
+    }
+    if(cnt==0 && i!=1)
+    printf("\n%d ",arr[i]);
+    
 }
 
 }

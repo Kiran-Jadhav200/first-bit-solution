@@ -1,41 +1,26 @@
-#include <stdio.h>
-int armstrong(int);
-void main()
-{
-  int range = 0;
-  printf("Enter the range: ");
-  scanf("%d", &range);
-  for (int nums = 0; nums < range; nums++)
-  {
-    if (armstrong(nums))
+#include<stdio.h>
+void main(){
+    int n ;
+    printf("Enter the size of the array: ");
+    scanf("%d",&n);
+    int arr[n];
+    int len = sizeof(arr)/sizeof(int);
+    for (int i = 0; i < len; i++)
     {
-      printf(" %d ", nums);
+        printf("enter number at index at %d : ",i+1 );
+        scanf("%d", &arr[i]);
     }
-  }
-}
-
-int armstrong(int num)
-{ // 4964
-  int temp, sum = 0;
-  int cnt = 0;
-  temp = num;
-  while (temp != 0) // 0
-  {
-    cnt++;      // 4
-    temp /= 10; // 0
-  }
-
-  temp = num; // 464
-  while (temp != 0)
-  {
-    int rem = temp % 10; // 4
-    int ans = 1;
-    for (int i = 0; i < cnt; i++)
+    printf("Array is ");
+     for (int i = 0; i < len; i++)
     {
-      ans *= rem;
+        printf("[ %d, ]", arr[i]);
+        
     }
-    sum += ans;
-    temp /= 10;
-  }
-  return sum == num; // 1 //0
+
+printf(" reverse is ");
+for (int i = len-1; i>=0; i--)
+    printf(" %d ",arr[i]);
+
+
+
 }

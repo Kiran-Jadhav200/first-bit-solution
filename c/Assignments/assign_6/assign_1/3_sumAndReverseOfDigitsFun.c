@@ -1,14 +1,16 @@
 #include<stdio.h>
-void sum(int);
-void rev(int);
+void sum(int*);
+void rev(int*);
 void main(){
-  sum(145);
-  rev(354);
+  int su =145;
+  int re =145;  
+  sum(&su);
+  rev(&re);
 }
-void sum(int num ){
+void sum(int *num ){
 
-    int rem1= num%10;
-    int q1= num/10;
+    int rem1= *num%10;
+    int q1= *num/10;
     int rem2 = q1%10;
     int q2 = q1/10;
     int rem3 = q2%10;
@@ -21,10 +23,10 @@ void sum(int num ){
     } 
     printf("sum: %d\nReverse: %d",sum);
 }
-void rev(int num ){
+void rev(int *num ){
    
-    int rem1= num%10;
-    int q1= num/10;
+    int rem1= *num%10;
+    int q1= *num/10;
     int rem2 = q1%10;
     int q2 = q1/10;
     int rem3 = q2%10;

@@ -6,13 +6,13 @@ void areaofCirle(int*);
 void perimeterOfCircle(int*);
 void main(){
     int r = 7;
-    
+    int len =5;
+    int width=14;
         areaofCirle(&r);
        perimeterOfCircle(&r);
-       perimeterOfReact(5,25);
-        areaofReact(25,41);
+       perimeterOfReact(&len,&width);
+        areaofReact(&width,&width);
 }
-
 void areaofCirle(int *radius){
     
     printf("area of circle: %.lf \n", PI*((*radius)*(*radius)));
@@ -26,7 +26,7 @@ void perimeterOfCircle(int *radius){
 
 void areaofReact(int *length,int *width){
     
-    printf("area of reactangle: %lf\n", (*length) * (*width));
+    printf("area of reactangle: %lf\n", (*length)*(*width));
 }
 void perimeterOfReact(int *length,int *width ){
      
