@@ -1,14 +1,15 @@
 #include<stdio.h>
-void strongNumber(int);
+void strongNumber(int*);
 void main(){
    
-    strongNumber(33);
+   int num =33;
+    strongNumber(&num);
 }
 
-void  strongNumber(int range){
+void  strongNumber(int *range){
      
     printf("the strong number are: ");
-    for (int i = 1; i <= range; i++)
+    for (int i = 1; i <= *range; i++)
     {
         int r =0,sum=0,fact,temp=i;
 

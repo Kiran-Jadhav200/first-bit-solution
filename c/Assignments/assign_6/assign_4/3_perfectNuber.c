@@ -1,16 +1,17 @@
 #include<stdio.h>
-void perfectNumber(int);
+void perfectNumber(int*);
 void main(){
+    int num = 19;
 
-    perfectNumber(19);
+    perfectNumber(&num);
 }
 
-void perfectNumber(int range){
+void perfectNumber(int *range){
          
     printf("enter number: ");
     scanf("%d",&range);
     printf("the perfect number are: ");
-    for (int i = 0; i < range; i++)
+    for (int i = 0; i < *range; i++)
     {
         int sum =0;
          int j =1;

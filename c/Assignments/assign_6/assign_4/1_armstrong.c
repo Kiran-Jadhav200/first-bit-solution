@@ -1,15 +1,16 @@
 #include <stdio.h>
 
-void armstrong(int);
+void armstrong(int*);
 void main()
 {
-armstrong(1000);
+  int num = 100;
+armstrong(&num);
 }
-void armstrong(int range){
+void armstrong(int *range){
   
   int  rem, temp, sum;
   
-  for (int num = 1; num < range; num++)
+  for (int num = 1; num < *range; num++)
   {
     int cnt = 0;
     temp = num; // 153

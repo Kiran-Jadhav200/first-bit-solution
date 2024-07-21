@@ -1,14 +1,15 @@
 #include<stdio.h>
-void isPrime(int);
+void isPrime(int*);
 void main(){
-isPrime(72);
+    int num =72;
+isPrime(&num);
     
 }
-void isPrime(int n)
+void isPrime(int *n)
 {
         int cnt;
     printf("Prime numbers are: ");
-for(int i =1; i<=n; i++ ){//i=1 && 1<7
+for(int i =1; i<= *n; i++ ){//i=1 && 1<7
     cnt =0;
     for (int j = 2; j <=i/2;j++) //j=0
     {
