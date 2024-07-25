@@ -1,27 +1,41 @@
 #include<stdio.h>
+int* store(int*,int);
+void display(int*, int);
+int sumOfArray(int*,int);
 void main(){
     int n ;
     printf("Enter the size of the array: ");
     scanf("%d",&n);
     int arr[n];
     int len = sizeof(arr)/sizeof(int);
-    for (int i = 0; i < len; i++)
+   store(arr,len);
+   display(arr,len);
+
+
+printf("\nsum is  %d ",sumOfArray(arr,len));
+
+}
+int* store(int * nums, int size){
+for (int i = 0; i < size; i++)
     {
         printf("enter number at index at %d : ",i+1 );
-        scanf("%d", &arr[i]);
+        scanf("%d", &nums[i]);
     }
-    printf("Array is ");
-     for (int i = 0; i < len; i++)
-    {
-        printf("[ %d, ]", arr[i]);
-        
-    }
+    return nums;
 
-int sum =0;
-for (int i = 0; i < len; i++)
-{
-   sum += arr[i];  
+ }
+
+void display(int* nums, int size){
+    for (int  i = 0; i < size; i++){
+   printf(" %d ", nums[i]);
 }
-printf("\nsum is  %d ",sum);
 
+}
+int sumOfArray(int* nums,int size){
+    int sum =0;
+for (int i = 0; i < size; i++)
+{
+   sum += nums[i];  
+}
+return sum;
 }
